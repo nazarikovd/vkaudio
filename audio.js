@@ -1,4 +1,4 @@
-const VKAudio = require("/root/bots/vkaudio/api.js")
+const VKAudio = require("./api.js")
 const express = require('express')
 const { getPaletteFromURL } = require('color-thief-node');
 const { API, resolveResource } = require('vk-io');
@@ -14,7 +14,7 @@ const api = new API({
     token: VKToken
 })
 
-app.use(express.static('/root/bots/vkaudio/public'))
+app.use(express.static('./public'))
 
 app.get('/audio.getAudioByUser', async (req, res) => {
 
