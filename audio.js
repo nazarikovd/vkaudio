@@ -14,8 +14,6 @@ const api = new API({
     token: VKToken
 })
 
-app.use(express.static('./public'))
-
 app.get('/audio.getAudioByUser', async (req, res) => {
 
 	let params = {
